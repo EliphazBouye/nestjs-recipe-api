@@ -13,7 +13,8 @@ export class UsersService {
   }
 
   async users(): Promise<User[]> {
-    return this.prisma.user.findMany(); 
+    return this.prisma.user.findMany({
+    }); 
   }
 
   async createUser(data: Prisma.UserCreateInput): Promise<User> {
